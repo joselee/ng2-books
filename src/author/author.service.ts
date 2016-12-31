@@ -2,21 +2,20 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
-export class Book {
+export class Author {
     id: number;
-    title: string;
-    authorId: number;
-    imageUrl: string;
+    name: string;
+    image: string;
 }
 
 @Injectable()
-export class BookService {
+export class AuthorService {
     constructor(private http: Http) { }
 
-    getBooks() {
+    getAuthors() {
         return this.http
-            .get('api/books.json')
-            .map((response: Response) => <Book[]>response.json())
+            .get('api/authors.json')
+            .map((response: Response) => <Author[]>response.json())
             .catch(this.handleError);
     }
 

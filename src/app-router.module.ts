@@ -24,7 +24,7 @@ const routes: Routes = [
     },
     {
         path: '',
-        redirectTo: 'books',
+        component: BookListComponent,
         pathMatch: 'full'
     },
     {

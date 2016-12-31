@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "title": "Game of Thrones",
+        "authorId": 0,
+        "imageUrl": "http://vignette1.wikia.nocookie.net/iceandfire/images/b/b6/Game_of_thrones.jpeg/revision/latest?cb=20130302001049"
+    },
+    {
+        "id": 1,
+        "title": "A Storm of Swords",
+        "authorId": 0,
+        "imageUrl": "http://www.coverwhiz.com/content/A-Storm-Of-Swords_novel.jpg"
+    },
+    {
+        "id": 2,
+        "title": "A Feast for Crows",
+        "authorId": 0,
+        "imageUrl": "http://www.georgerrmartin.com/gallery/art/crows01.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Clash of Kings",
+        "authorId": 0,
+        "imageUrl": "http://www.coverwhiz.com/content/A-Clash-Of-Kings_novel.jpg"
+    },
+    {
+        "id": 4,
+        "title": "A Dance with Dragons",
+        "authorId": 0,
+        "imageUrl": "http://georgerrmartin.com/gallery/art/dragons05.jpg"
+    },
+    {
+        "id": 5,
+        "title": "The Martian",
+        "authorId": 1,
+        "imageUrl": "http://a1.dspncdn.com/media/692x/39/8b/97/398b970eca3ba9bab68601f87c7d3d86.jpg"
+    },
+    {
+        "id": 6,
+        "title": "The Egg",
+        "authorId": 1,
+        "imageUrl": "http://images.gr-assets.com/books/1431492647l/17563539.jpg"
+    },
+    {
+        "id": 7,
+        "title": "The Fellowship of the Ring",
+        "authorId": 2,
+        "imageUrl": "https://s-media-cache-ak0.pinimg.com/236x/dd/71/74/dd71746d3c44a37c0ba44e299a2754b7.jpg"
+    },
+    {
+        "id": 8,
+        "title": "The Two Towers",
+        "authorId": 2,
+        "imageUrl": "https://usercontent1.hubstatic.com/8141508_f260.jpg"
+    },
+    {
+        "id": 9,
+        "title": "The Return of the King",
+        "authorId": 2,
+        "imageUrl": "https://usercontent1.hubstatic.com/8141542_f260.jpg"
+    }
+]

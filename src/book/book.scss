@@ -1,0 +1,19 @@
+.book-list-item {
+    display: inline-block;
+    width: 25%;
+    margin-bottom: 40px;
+
+    .book-cover-image {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 200px;
+    }
+
+    .book-title {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+}

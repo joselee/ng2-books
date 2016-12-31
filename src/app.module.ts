@@ -6,6 +6,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRouterModule, RouterComponents } from './app-router.module';
 import { AppComponent } from './app.component';
+import { AuthorService } from './author/author.service';
+import { BookService } from './book/book.service';
 
 
 @NgModule({
@@ -20,7 +22,10 @@ import { AppComponent } from './app.component';
         AppComponent,
         RouterComponents
     ],
-    providers: [],
+    providers: [
+        AuthorService,
+        BookService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

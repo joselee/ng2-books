@@ -1,0 +1,18 @@
+[
+    {
+        "id": 0,
+        "name": "George R.R. Martin",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/George_R._R._Martin_by_Gage_Skidmore_2.jpg"
+    },
+    {
+        "id": 1,
+        "name": "Andy Weir",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Andy_Weir_at_NASA_JSC-crop.png"
+    },
+    {
+        "id": 3,
+        "name": "J.R.R. Tolkien",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Tolkien_1916.jpg"
+        
+    }
+]

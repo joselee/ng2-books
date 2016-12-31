@@ -1,9 +1,10 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import 'book/book';
 body {
-    background-color: #eee;
     font-family: "Helvetica Neue",sans-serif;
+    box-sizing: border-box;
 }
-.main-container {
-    padding: 1rem;
+
+.container {
+    padding-top: 40px;
 }

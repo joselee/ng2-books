@@ -20,6 +20,15 @@ export class BookService {
             .catch(this.handleError);
     }
 
+    getBook(id: number) {
+        return this.getBooks()
+            .map(books => {
+                let book = books.find(book => book.id === id);
+                console.log('found book', book);
+                return book;
+            });
+    }
+
      handleError(error: Response) {
         console.error(error);
         return Observable.throw(`Error status code ${error.status} at ${error.url}`);

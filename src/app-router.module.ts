@@ -24,12 +24,12 @@ const routes: Routes = [
     },
     {
         path: '',
-        component: BookListComponent,
+        redirectTo: '/books',
         pathMatch: 'full'
     },
     {
         path: '**',
-        redirectTo: 'books'
+        redirectTo: '/books'
     }
 ];
 

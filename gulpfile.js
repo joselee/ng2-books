@@ -10,6 +10,7 @@ const Builder = require('systemjs-builder');
 const builder = new Builder('', 'systemjs.config.js');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
+const historyApiFallback = require('connect-history-api-fallback');
 
 /* --- Production build tasks --- */
 gulp.task('prod', ['build'], () => {
@@ -63,8 +64,11 @@ gulp.task('watch', ['build'], () => {
 
 gulp.task('default', ['watch'], () => {
     browserSync.init({
-        server: { baseDir: '.', directory: false },
-        startPath: '/'
+        files: ['./index.html', './build/**.*'],
+        server: {
+            baseDir: './',
+            middleware: [historyApiFallback()]
+        }
     });
     gulp.watch('build/**/*').on('change', browserSync.reload);
 });

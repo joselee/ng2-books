@@ -1,7 +1,13 @@
-import { Component } from '@angular/core';
+import { InRightOutRight } from '../../animations';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'author-detail',
-  template: 'author-detail.component.html'
+    selector: 'author-detail',
+    templateUrl: 'author-detail.component.html',
+    animations: [InRightOutRight]
 })
-export class AuthorDetailComponent { }
+export class AuthorDetailComponent {
+    @HostBinding('@routeAnimation') routeAnimation = true;
+    @HostBinding('style.display') display = 'block';
+    @HostBinding('style.position') position = 'absolute';
+}

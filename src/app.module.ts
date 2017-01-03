@@ -1,6 +1,6 @@
-import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule, Routes } from '@angular/router';
 import { BookModule } from './book/book.module';
 import { AuthorModule } from './author/author.module';
 

@@ -1,25 +1,38 @@
-import { animate, AnimationEntryMetadata, state, style, transition, trigger } from '@angular/core';
+import {
+    animate,
+    AnimationEntryMetadata,
+    style,
+    transition,
+    trigger
+} from '@angular/core';
 
-// Component transition animations
-export const slideInDownAnimation: AnimationEntryMetadata =
+const animateStyle = '0.33s ease-in-out';
+const centerScreen = style({ opacity: 1, transform: 'translateX(0)' });
+const offScreenLeft = style({ opacity: 0, transform: 'translateX(-100%)' });
+const offScreenRight = style({ opacity: 0, transform: 'translateX(100%)' });
+
+
+// Enter moves the element off screen instantly, then eases it to the centerScreen
+// Exit just eases it off screen, without pre-positioning
+export const InLeftOutLeft: AnimationEntryMetadata =
     trigger('routeAnimation', [
-        state('*',
-            style({
-                opacity: 1,
-                transform: 'translateX(0)'
-            })
-        ),
         transition(':enter', [
-            style({
-                opacity: 0,
-                // transform: 'translateX(100%)'
-            }),
-            animate('0.3s ease-in')
+            offScreenLeft,
+            animate(animateStyle, centerScreen)
         ]),
-        // transition(':leave', [
-        //     animate('0.2s ease-out', style({
-        //         opacity: 0,
-        //         transform: 'translateY(100%)'
-        //     }))
-        // ])
+        transition(':leave', [
+            animate(animateStyle, offScreenLeft)
+        ])
+    ]);
+
+
+export const InRightOutRight: AnimationEntryMetadata =
+    trigger('routeAnimation', [
+        transition(':enter', [
+            offScreenRight,
+            animate(animateStyle, centerScreen)
+        ]),
+        transition(':leave', [
+            animate(animateStyle, offScreenRight)
+        ])
     ]);

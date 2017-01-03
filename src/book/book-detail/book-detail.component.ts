@@ -1,12 +1,12 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Book, BookService } from '../book.service';
-import { slideInDownAnimation } from '../../animations';
+import { InRightOutRight } from '../../animations';
 
 @Component({
     selector: 'book-detail',
     templateUrl: 'book-detail.component.html',
-    animations: [slideInDownAnimation]
+    animations: [InRightOutRight]
 })
 export class BookDetailComponent implements OnInit {
     @HostBinding('@routeAnimation') routeAnimation = true;

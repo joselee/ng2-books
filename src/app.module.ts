@@ -1,31 +1,31 @@
+import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BookModule } from './book/book.module';
+import { AuthorModule } from './author/author.module';
 
-import { AppRouterModule, RouterComponents } from './app-router.module';
 import { AppComponent } from './app.component';
-import { AuthorService } from './author/author.service';
-import { BookService } from './book/book.service';
 
+const appRoutes: Routes = [
+    {
+        path: '',
+        redirectTo: '/books',
+        pathMatch: 'full'
+    },
+    {
+        path: '**',
+        redirectTo: '/books'
+    }
+];
 
 @NgModule({
     imports: [
-        BrowserModule,
-        FormsModule,
-        HttpModule,
         NgbModule.forRoot(),
-        AppRouterModule
+        BookModule,
+        AuthorModule,
+        RouterModule.forRoot(appRoutes)
     ],
-    declarations: [
-        AppComponent,
-        RouterComponents
-    ],
-    providers: [
-        AuthorService,
-        BookService
-    ],
+    declarations: [AppComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

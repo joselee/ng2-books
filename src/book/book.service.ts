@@ -24,7 +24,6 @@ export class BookService {
         return this.getBooks()
             .map(books => {
                 let book = books.find(book => book.id === id);
-                console.log('found book', book);
                 return book;
             });
     }

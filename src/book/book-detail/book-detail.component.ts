@@ -4,27 +4,29 @@ import { Book, BookService } from '../book.service';
 import { slideInDownAnimation } from '../../animations';
 
 @Component({
-  selector: 'book-detail',
-  templateUrl: 'book-detail.component.html'
+    selector: 'book-detail',
+    templateUrl: 'book-detail.component.html',
+    animations: [slideInDownAnimation]
 })
 export class BookDetailComponent implements OnInit {
+    @HostBinding('@routeAnimation') routeAnimation = true;
+    @HostBinding('style.display') display = 'block';
+    @HostBinding('style.position') position = 'absolute';
+
     private book: Book;
-    private id: number;
 
     constructor(private route: ActivatedRoute,
-                private router: Router,
-                private bookService: BookService) { }
+        private router: Router,
+        private bookService: BookService) { }
 
     ngOnInit() {
-        this.route
-            .params
+        this.route.params
             .map((params: Params) => params['id'])
-            .do(id => this.id = +id)
-            .subscribe(id => this.getBook());
+            .subscribe(id => this.getBook(+id));
     }
 
-    getBook() {
-        this.bookService.getBook(this.id)
+    getBook(id: number) {
+        this.bookService.getBook(id)
             .subscribe(book => this.book = book);
     }
 }

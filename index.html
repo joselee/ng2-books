@@ -6,7 +6,15 @@
     <title>Angular2 - SystemJS</title>
     <base href="/ng2-books/" />
     <link rel="stylesheet" href="./app.css">
-
+    <script>
+        (function(){
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect != location.href) {
+                history.replaceState(null, null, redirect);
+            }
+        })();
+    </script>
   </head>
   <body>
     <app>Loading...</app>
